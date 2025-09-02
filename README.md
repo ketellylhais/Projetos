@@ -31,5 +31,5 @@ Clique no link abaixo para abrir o jogo no navegador:
 ---
 
 ## Preview
-![Mario pulando](img/mario.gif)
+![Mario](img/mario)
 
