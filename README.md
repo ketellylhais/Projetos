@@ -28,8 +28,4 @@ Clique no link abaixo para abrir o jogo no navegador:
 - `script.js` → Lógica do jogo  
 - `img/` → Imagens do Mario e do cano  
 
----
-
-## Preview
-![Mario](img/mario)
 
