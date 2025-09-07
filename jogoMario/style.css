@@ -13,6 +13,33 @@ body{
     justify-content: center;
     align-items: center;
 }
+.play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height:40px ;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.279);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer;
+    display: none;
+}
+
+.score{
+    position: absolute;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+    text-align: end;
+    left: -40px;
+}
 
 .reiniciar{
     position: absolute;
@@ -32,6 +59,19 @@ body{
     cursor: pointer;
     display: none;
 }
+
+.exibirPontuacao{
+    position: absolute;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.3em;
+    width: 100%;
+    top: 35%;
+    left: 10%;
+    transform: translate(30%, -50%);
+
+}
+
 
 .container{
     position: fixed;
