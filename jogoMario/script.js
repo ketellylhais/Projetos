@@ -4,29 +4,41 @@ const reiniciar = document.querySelector('.reiniciar');
 const play = document.querySelector('.play');
 const pontuacao = document.querySelector('.pontuacao');
 const exibir = document.querySelector('.exibirPontuacao');
+const somPulo = new Audio('Super Mario - Som do pulo do Mário.mp3')
+
 
 let score = 0;
 let ticks = 0;
+let jogoAtivo = false;
 
 const jump = () => {
+    if(!jogoAtivo) return;
+
     mario.classList.add('jump');
 
+    somPulo.currentTime = 0;
+    somPulo.play();
+
     setTimeout(() =>{
-        mario.classList.remove('jump')
+        mario.classList.remove('jump');
     }, 500);
 
 }
 
 play.style.display = 'block';
 exibir.style.display = 'none'
+pipe.style.display = 'none';
 
 play.addEventListener('click', () => {
     play.style.display = 'none';
     reiniciar.style.display = 'none';
+    pipe.style.display = 'block';
+    jogoAtivo = true;
 
  const loop = setInterval(()=>{
     const pipePosition =  pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '' );
+    pipe.classList.add('pipeAnimation');
     
     ticks++;
 if (ticks % 10 === 0) {
@@ -51,11 +63,11 @@ if (ticks % 10 === 0) {
         clearInterval(loop);
 
         reiniciar.style.display = 'block';
+
+        jogoAtivo = false;
     }
 } ,10);
 })
-
-
 
 
 document.addEventListener('keydown', jump);

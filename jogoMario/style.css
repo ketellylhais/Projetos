@@ -13,6 +13,19 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.container{
+    position: fixed;
+    animation: background-animation 60s linear forwards;
+    width: 700px;
+    height: 500px;
+    border: 2px solid rgb(37, 132, 170);
+    border-bottom: 15px solid rgb(13, 158, 13);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.395);
+    overflow: hidden;  
+}
+
 .play{
     position: absolute;
     top: 50%;
@@ -39,7 +52,7 @@ body{
     width: 100%;
     justify-content: end;
     text-align: end;
-    left: -50px;
+    left: -40px;
 }
 
 .reiniciar{
@@ -74,24 +87,17 @@ body{
 }
 
 
-.container{
-    position: fixed;
-    background-image: linear-gradient(rgb(39, 148, 190), rgb(125, 212, 247), rgb(226, 237, 199));
-    width: 700px;
-    height: 500px;
-    border: 2px solid rgb(37, 132, 170);
-    border-bottom: 15px solid rgb(13, 158, 13);
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.395);
-    overflow: hidden;  
-}
+
 
 .pipe{
     position: absolute;
     width: 70px;
     bottom: 0;
-   animation: animation-pipe 1.5s linear infinite;
+    
+}
 
+.pipeAnimation {
+    animation: animation-pipe 1.5s linear infinite;
 }
 
 .mario{
@@ -155,6 +161,26 @@ body{
     }
 }
 
+
+@keyframes background-animation{
+     0% {
+    background-image: linear-gradient(rgb(39, 148, 190), rgb(125, 212, 247), rgb(226, 237, 199)); /* dia */
+  }
+  25% {
+    background-image: linear-gradient(rgb(60, 130, 180), rgb(110, 170, 200), rgb(200, 220, 190)); /* tarde */
+  }
+  50% {
+    background-image: linear-gradient(rgb(40, 90, 150), rgb(80, 120, 160), rgb(140, 160, 160)); /* pôr do sol */
+  }
+  75% {
+    background-image: linear-gradient(rgb(20, 60, 100), rgb(40, 80, 120), rgb(80, 90, 100)); /* entardecer */
+  }
+  100% {
+    background-image: linear-gradient(rgb(10, 30, 60), rgb(20, 40, 70), rgb(30, 30, 40)); /* noite */
+  }
+}
+
+
 @media(max-width:678px){
     
     html, body {
@@ -179,6 +205,11 @@ body{
     }
 
     .exibirPontuacao{
-        left: 20px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-40%, -50%);
+        width: 180px;
+        height:40px;
     }
 }
