@@ -36,10 +36,10 @@ body{
     position: absolute;
     color: white;
     font-family: "Pixelify Sans", sans-serif;
-    width: 490px;
+    width: 100%;
     justify-content: end;
     text-align: end;
-    left: -40px;
+    left: -50px;
 }
 
 .reiniciar{
@@ -169,7 +169,7 @@ body{
     }
 
     .score{
-        left: 0px;
+        left: -10px;
     }
 
     .exibirPontuacao{
