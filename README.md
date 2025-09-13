@@ -52,6 +52,38 @@ Clique no link abaixo para abrir o jogo no navegador:
 - `index.html` → Estrutura do jogo  
 - `style.css` → Estilos e animações  
 - `script.js` → Lógica do jogo  
-- `img/` → Imagens do Mario e do cano  
+- `img/` → Imagens do Mario e do cano
+ ---
 
+# ☕ Starbucks Clone
+
+Este é um projeto desenvolvido a partir do evento do **DevClub**, com o **Rodolfo Mori**.  
+No projeto original já havia a integração com uma **IA criada no Botpress**, e eu evoluí a aplicação adicionando:
+
+- 📱 **Versão responsiva para smartphones**  
+- ✨ **Animações em CSS/JS** para deixar a experiência mais dinâmica  
+
+---
+
+## 🚀 Tecnologias utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Botpress (IA)**
+
+---
+
+## 📷 Preview do Projeto
+👉 [Acesse o projeto aqui](https://ketellylhais.github.io/Projetos/starbucks/)
+
+---
+
+## 📚 Aprendizados
+Durante o desenvolvimento, aprofundei meus conhecimentos em:
+- Estruturação de layout com **HTML**
+- Estilização e responsividade com **CSS**
+- Manipulação de elementos com **JavaScript**
+- Integração de **IA com Botpress**
+
+---
 
