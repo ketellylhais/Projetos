@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 210px;
+    background-color: black;
+    background-image: url("img/fundo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+h2{
+    color: white;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+
+}
+
+button{
+    background-color: #017143;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: #03a15f;
+    transition: 0.3s;
+    padding: 23px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.caixa-conteudo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa-textos{
+    width: 600px;
+}
+
+.texto-starbucks{
+    color: #017143;
+    font-weight: 900;
+    font-size: 70px;
+}
+
+.caixa-imagem{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem-copo{
+    position: absolute;
+    width: 340px;
+    top: 15%;
+}
+
+.animacao{
+    animation: copoEntrando 0.5s linear;
+}
+
+.caixa-menu{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botao-menu{
+    width: 80px;
+    cursor: pointer;
+    
+}
+
+.circulo{
+    background-color: #017143;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(600px at right 800px);
+    z-index: -1;
+}
+
+footer{
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    transform: translate(-50%);
+}
+
+
+
+@keyframes copoEntrando{
+    from{
+        right: -400px;
+    }
+    to{
+        right: 100px;
+    }
+}
+
+
+/* Responsivo para smartphones */
+@media (max-width: 678px) {
+    body {
+        background-color: black;
+        background-image: none;
+        padding: 20px 15px 150px 15px; /* menos espaçamento lateral e inferior */
+        overflow: auto; /* evita scroll horizontal */
+        margin: 30px;
+    }
+
+    h2 {
+        font-size: 35px; /* título menor */
+        line-height: 1.2;
+    }
+
+    p {
+        font-size: 16px; /* texto menor */
+    }
+
+    button {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .caixa-conteudo {
+        flex-direction: column; /* empilha texto e imagem verticalmente */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .caixa-textos {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .texto-starbucks {
+        font-size: 40px;
+    }
+
+    .caixa-imagem {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagem-copo {
+        position: relative; /* não sobrepor outros elementos */
+        width: 250px; /* menor para caber na tela */
+        top: 0;
+        right: 0;
+        margin-bottom: 20px;
+    }
+
+    .caixa-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .botao-menu {
+        width: 60px;
+    }
+
+    .circulo {
+        display: none;
+    }
+
+    footer {
+        position: fixed;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
